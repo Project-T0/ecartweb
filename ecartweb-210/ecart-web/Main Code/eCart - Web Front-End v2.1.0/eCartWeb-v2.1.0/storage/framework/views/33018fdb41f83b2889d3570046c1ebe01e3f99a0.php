@@ -1,0 +1,1 @@
+<?php /**PATH /home3/wrteamin/public_html/webekart/ekartfulllayout/resources/views/themes/ekartfulllayout/error.blade.php ENDPATH**/ ?>

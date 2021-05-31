@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\ecart-02-live\resources\views/themes/ekartfulllayout/error.blade.php ENDPATH**/ ?>

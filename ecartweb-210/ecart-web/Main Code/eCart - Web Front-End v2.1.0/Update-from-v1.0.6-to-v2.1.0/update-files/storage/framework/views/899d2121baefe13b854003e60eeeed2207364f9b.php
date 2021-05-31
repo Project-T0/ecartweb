@@ -1,0 +1,1 @@
+<?php /**PATH /home3/wrteamin/public_html/webekart/ekartfulllayout/resources/views/themes/eCart_02/error.blade.php ENDPATH**/ ?>

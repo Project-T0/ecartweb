@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\ecarttest4\resources\views/themes/ekart/parts/advertisement_banner.blade.php ENDPATH**/ ?>

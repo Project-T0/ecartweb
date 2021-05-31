@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>eCart Front End Laravel Documentation</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="images/logo.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <section id="header">
+            <header>
+                <span class="image avatar"><img src="images/logo.png" alt="logo" /></span>
+                <h4 id="logo"><a href="#">eCart</a></h4>
+            </header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#part1" class="active">Introduction</a></li>
+                    <li><a href="#part2">Server Requirement</a></li>
+                    <li><a href="#part3">Installation</a></li>
+                    <li><a href="#part4">Firebase Setup</a></li>
+                    <li><a href="#part5">Bonus Tips</a></li>
+                    <li><a href="#part6">Theme Customization</a></li>
+					<li><a href="#part7">Theme Change<img src="images/newgif.gif" height="23px"></a></li>
+                   
+					<br><br><br>
+                </ul>
+            </nav>
+            <footer>
+                <ul class="icons">
+                    <li><a  target="_blank" class="icon fa-facebook" rel="noopener noreferrer"><span class="label">Facebook</span></a></li>
+                    <li><a target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                    <li><a target="_blank" class="icon fa-skype"><span class="label">Skype</span></a></li>
+                </ul>
+            </footer>
+        </section>
+        <div id="wrapper">
+        <div id="main">
+            <section id="part1">
+				<div class="container">
+                    <header class="major">
+                        <h3>Introducation</h3>
+                    </header>
+                    <div class="borderTop">
+                         <p>eCart Front End is Web Version of <a href='https://codecanyon.net/item/city-ecommerce-app/22015911' target="_blank">eCart - Grocery, Food Delivery, Fruits & Vegetable store, Web Version</a></p>
+        
+						<p><img src='images/PROMO_EKART.jpg' alt="Promo"></p>
+					</div>
+				</div>
+			</section>
+            <section id="part2">
+				<div class="container">
+                    <header class="major">
+                        <h3>Server Requirement - Laravel</h3>
+                    </header>
+                    <div class="borderTop">
+                        <ol class="alpha">
+                            <li><a href="#">PHP >= 7.4</a></li>
+                            <li><a href="#">BCMath PHP Extension</a></li>
+                            <li><a href="#">Ctype PHP Extension</a></li>
+                            <li><a href="#">Fileinfo PHP extension</a></li>
+                            <li><a href="#">JSON PHP Extension</a></li>
+                            <li><a href="#">Mbstring PHP Extension</a></li>
+                            <li><a href="#">OpenSSL PHP Extension</a></li>
+                            <li><a href="#">PDO PHP Extension</a></li>
+                            <li><a href="#">Tokenizer PHP Extension</a></li>
+                            <li><a href="#">XML PHP Extension</a></li>
+                        </ol>
+					</div>
+				</div>
+			</section>
+            <section id="part3">
+                <div class="container">
+                    <h3 id="installation"> Installation of eCart Front End Website on your server</h3>
+                    <ol>
+                        <li>Upload <strong>code.zip</strong> to server and unzip.</li>
+						<li>Navigate to root directory where you've unzip code.</li>
+                        <li>Then edit .env file</li>
+                        <li>Change APP_URL Parameter with <b>website url</b> <code>APP_URL=https://webekart.wrteam.in/</code></li>
+                        <li>Add New Parameters as follwing 
+							<ul>
+								<li>API_URL with value of eCart's API URL. For E.g. <code>API_URL=https://ekart.wrteam.in/api-firebase/</code> (admin panel url/api-firebase)</li>
+								<li>ASSET_URL with value of eCart's ASSET URL. For E.g. <code>ASSET_URL=https://webekart.wrteam.in/public/</code> (website url/public/)</li>
+							</ul>
+						</li>
+                        <li>Then go to config folder and find ekart.php file.</li>
+                         <li>Change APP_URL Parameter with <b>website url</b> <code>APP_URL=https://webekart.wrteam.in/</code></li>
+                         <li>Change API_URL Parameter  <code>API_URL=https://ekart.wrteam.in/api-firebase/</code></li>(admin panel url/api-firebase)
+						
+                         <li>Change ASSET_URL Parameter <code>ASSET_URL1=https://ekart.wrteam.in/dist/img/</code></li>(admin panel url/dist/img/)
+                        <li>
+				Change Following Parameter as per need else leave with default file.<br>
+				<strong>Note : </strong> Make sure following values are same which are used in eCart Admin Panel.
+				<ul>
+					<li>reload_settings</li>
+					<li>jwt_secret_key</li>
+					<li>jwt_payload</li>
+				</ul>
+			</li>
+			<li>Contact Us Form Details.<br>
+				<strong>Note : </strong> Make changes on .env file.(Change your mail details on .env file)<br>
+				<ul>
+					<li>MAIL_HOST with value of your host. For E.g. <code>MAIL_HOST=mail.wrteam.in</code></li>
+					<li>MAIL_PORT with value of your port. For E.g. <code>MAIL_PORT=587</code></li>
+					<li>MAIL_USERNAME with value of your username. For E.g. <code>MAIL_USERNAME=noreply@wrteam.in</code></li>
+					<li>MAIL_PASSWORD with value of your password. For E.g. <code>MAIL_PASSWORD="your_password"</code></li>(password should required in double quotes.)
+				</ul>
+				<strong>Note : </strong> Then make changes on app/Http/Controllers/MailController.php. (Replace your email as per .env file)<code>$message->to('noreply@wrteam.in')->subject
+            ('Enquiry Mail');</code><br>
+				
+			</li>
+                    </ol>
+                    <p>Thats it! Now you are ready to run your eCart Front End Website</p>
+                    <p>Goto: <strong>https://YOURDOMAIN.com/</strong></p> <a href="#part4" style="color:#1D86D6">(Please see below for Firebase Setup its required)</a>
+				</div>
+			</section>
+			<section id="part4">
+				<div class="container">
+                    <h3 id="settings"> Firebase Setup</h3>
+                    <h5>STEP 1 - Create Firebase Project</h5>
+					<ol>
+						<li>Goto <a href='https://console.firebase.google.com/' target="_blank" rel="noopener noreferrer">Firebase console.</a></li>
+						<li>Register new account or try to log in with existing accout
+							<img src='images/consolepage.png' alt="Console Page">
+						</li>
+						<li>Once logged in, you can see firebase console dashboard. Click on Add Project. Provide a project name, and then select country and then after that click on Create Project. For example, see the below image.
+							<img src='images/AddProject.png' alt="Add Project">
+							<img src='images/CreateProject.png' alt="Create Project">
+						</li>
+						<li>Once the project has been created, it will automatically redirect to Firebase dashboard screen
+							<img src='images/Dashboard.png' alt="Dashboard">
+						</li>
+						<li>
+							As eCart Front End is a web project, you need to add web project/application to the firebase project.
+							<img src='images/Dashboard_1.png' alt="Dashboard">
+						</li>
+						<li>
+							As mentioned in an earlier image, you can add Firebase to your web app.
+							<img src='images/Add_webapp_1.png' alt="Add Web App">
+						</li>
+						<li>
+							Once the web app been added into Firebase, you'll get a web app configuration Javascript code which you have copy and paste in <code>resources/views/themes/ekart/common/footer.blade.php</code>.
+							<img src='images/webapp_configuration.jpg' alt="Web App Configuration">
+							<!-- Add Firebase products that you want to use -->
+							<textarea><script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-auth.js"></script><br/><script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script></textarea>
+							
+						</li>
+						<li>
+							Then in firebase console you will be redirected to the web app dashboard screen.
+							<img src='images/webapp_dashboard_1.png' alt="Web App Dashboard">
+						</li>
+					</ol>
+					
+                    <h5>STEP 2 - Enable Phone Authentication in Firebase console</h5>
+					<ol>
+						<li>Once the web app is created and credentials have been set, we need to enable phone authentication mode from the Firebase console. From the left sidebar there will be an option for Authentication. Once you click on the Authentication menu there will be an option for Sign-In Method.
+							<img src='images/Authentication_1.png' alt="Authentication">
+						</li>
+						<li>Once you click on Sign-In Method, a new list with the multiple sign in providers will appear. From that list you need to choose the Phone option to enable it. So you need to click on the pencil icon which will appear when you hover on Phone from the list. You need to eneble the phone authentication from the screen just like the below images.
+							<img src='images/PhoneMethod.png' alt="Phone Method">
+							<img src='images/EnablePhone.png' alt="Enable Phone">
+						</li>
+						<li>There will be an option to test authentication as well, so you can click on it. There, you need to provide the number. It will automatically send the verification code to the given number. In  this way you can test and verify the authentication using your phone number.
+							<img src='images/Verification.png' alt="Verification">
+						</li>
+						<li>
+							Now at the bottom of the page,  in "Authorized domains", localhost and a Firebase domain  are automatically added. Here we've to add domain name without http:// and https:// whever eCart Front End Website will get hosted.
+							<small>If you're using www as prefix of domain name then you must have to add that.
+							<img src='images/firebase-authentication.png'>
+						</li>
+					</ol>
+					<h5>STEP 3 - Google Service Account</h5>
+					<ol>
+						<li>Firebase projects support Google service accounts, To authenticate a service account and authorize it to access Firebase services, <b><u>you must generate a private key file in JSON format.</u></you></b></li>
+						<li>To generate a private key file for your service account:
+							<ul>
+								<li>In the Firebase console, open Settings > Service Accounts.</li>
+								<li>Click Generate New Private Key, then confirm by clicking Generate Key.</li>
+								<li>Securely store the JSON file containing the key at path : <code>config/firebase.json</code></li>
+								<img src='images/Firebase-console-security-key.png'>
+							</ul>
+						</li>
+					</ol>
+					<h5>Congratulations. You're Done.</h5>
+					<p>Feel Free to contact us for any queries.</p>
+				</div>
+            </section>
+			<section id="part5">
+				<div class="container">
+					<h3>Bonus Tips</h3>
+					<p>Whenever doing any changes in settings of eCart Admin Panel (like Payment Methods enabled/disabled or Delivery Fees Updated) kindly hit URL https://YOURDOMAIN.com/clear-cache to Clear All Cached Data.</p>
+				</div>
+			</section>
+			<section id="part6">
+				<div class="container">
+					<h3>Theme Customization</h3>
+					<ul>
+						<li>Copy folder <code>resources/views/themes/eCart_01</code></li>
+						<li>Rename copied folder with name you wanted. For e.g. <strong>new-theme</strong></li>
+						<li>Copy folder <code>public/themes/eCart_01</code></li>
+						<li>Rename copied folder with name which you created earlier. For e.g. <strong>new-theme</strong></li>
+						<li>Goto <code>config/ekart.php</code> change value of attribute named <strong>theme</strong> from <strong>eCart_01</strong> to your theme name. For e.g. <strong>new-theme</strong></li>
+						<li>Do customizations of htmls in <code>resources/views/themes/new-theme</code></li>
+						<li>Do customizations of css, javascript in <code>public/themes/new-theme</code></li>
+						<li>Change screenshots images from this folder:<code>resoures/views/eCart_01/parts/offers.blade.php</code></li>
+					</ul>
+				</div>
+			</section>
+			<section id="part7">
+				<div class="container">
+					<h3>Theme Change</h3>
+					<ul>
+						<li>Goto <code>config/ekart.php</code> change value of attribute named <strong>theme</strong> from <strong>eCart_01</strong> to <strong>eCart_02</strong></li>
+						<li>Do customizations of htmls in <code>resources/views/themes/eCart_02</code></li>
+						<li>Do customizations of css, javascript in <code>public/themes/eCart_02</code></li>
+						<li>About Us <code>resources/view/theme/eCart_02/about.blade.php</code>
+							<ul>
+								<li>you can change text - <code>resources/lang/en/msg.php</code></li>
+								<li>you can change images - <code>public/themes/eCart_02/images</code></li>
+								<img src='images/about-section.png' width="110%">
+							</ul>
+						</li>
+						
+					</ul>
+					
+				</div>
+			</section>
+			       
+        </div>
+        <!-- Scripts --> 
+        <script src="assets/js/jquery.min.js"></script> 
+        <script src="assets/js/jquery.scrollzer.min.js"></script> 
+        <script src="assets/js/jquery.scrolly.min.js"></script> 
+        <script src="assets/js/skel.min.js"></script> 
+        <script src="assets/js/util.js"></script> 
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]--> 
+        <script src="assets/js/main.js"></script>
+        <script type="text/javascript">
+			$(document).ready(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('.scrollup').fadeIn();
+					} else {
+						$('.scrollup').fadeOut();
+					}
+				});
+				$('.scrollup').click(function () {
+					$("html, body").animate({ scrollTop: 0 }, 600);
+					return false;
+				});
+			});
+		</script>
+		<div><a href="#" class="scrollup">Scroll</a></div>
+    </body>
+</html>
